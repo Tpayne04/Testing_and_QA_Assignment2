@@ -46,7 +46,6 @@ def test_calculate_bmi_obese_range():
     assert bmi >= 30
 
 
-
 # Boundary tests
 def test_underweight_boundary():
     assert getBMICategory(18.4) == "Underweight"
