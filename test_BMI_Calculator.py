@@ -47,6 +47,10 @@ def test_calculate_bmi_obese_range():
 
 
 
+# Boundary tests
+def test_underweight_boundary():
+    assert getBMICategory(18.4) == "Underweight"
+
 def test_normal_lower_boundary():
     assert getBMICategory(18.5) == "Normal Weight"
 
@@ -55,6 +59,9 @@ def test_normal_upper_boundary():
 
 def test_overweight_lower_boundary():
     assert getBMICategory(25.0) == "Overweight"
+
+def test_overweight_upper_boundary():
+    assert getBMICategory(29.9) == "Overweight"
 
 def test_obese_boundary():
     assert getBMICategory(30.0) == "Obese"
